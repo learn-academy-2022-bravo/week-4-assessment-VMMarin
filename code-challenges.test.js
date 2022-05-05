@@ -104,32 +104,37 @@ describe('hiLow', () => {
 //
 // // b) Create the function that makes the test pass. Create a function that takes an array of numbers and returns an array of the minimum and maximum numbers in that order.
 //
-// //create a fnction called minmax
-// //using math.max and math.min I will pull the minumum and maximum elements from the array
-//
-// const min = Math.min(...nums1)
-// const max = Math.max(...nums1)
-// const minMaxrray = [min, max]
-//
+
+
+// create a function called hiLow
+// using math.max and math.min
+
+const hiLow = (array) => {
+ let min = Math.min(...array)
+ let max = Math.max(...array)
+ return [min, max]
+}
 // // --------------------3) Create a function that takes in two arrays as arguments and returns one array with no duplicate values. STRETCH: Use the spread operator to pass in a dynamic number of arguments.
 //
 // // a) Create a test with an expect statement using the variables provided.
 //
-describe(testArray3, () => {
+describe('testArray3', () => {
   it('takes in two arrays as arguments and returns one array with no duplicate values', () => {
     const testArray1 = [3, 7, 10, 5, 4, 3, 3]
     const testArray2 = [7, 8, 2, 3, 1, 5, 4]
-    expect(testArray3(testArray1).concat(testArray2)).toEqual[3, 7, 10, 5, 4, 8, 2, 1]
-
-
+    expect(testArray3.from(new Set(testArray1.concat(testArray2)).toEqual([3, 7, 10, 5, 4, 8, 2, 1]))
+  )
+})
 // const testArray1 = [3, 7, 10, 5, 4, 3, 3]
 // const testArray2 = [7, 8, 2, 3, 1, 5, 4]
 // // Expected output: [3, 7, 10, 5, 4, 8, 2, 1]
 //
 //
 // // b) Create the function that makes the test pass.
-// //use destructuring to create a new Set - will utilize spread operator
-// const testArray1 = [3, 7, 10, 5, 4, 3, 3]
-// const testArray2 = [7, 8, 2, 3, 1, 5, 4]
-// const testArray3 = testArray1.concat(testArray2)
-// testArray3 = [new Set([...testArray1,...testArray2])]
+// //use destructuring to create a new Set 
+// use concat to merge
+
+const testArray1 = [3, 7, 10, 5, 4, 3, 3]
+const testArray2 = [7, 8, 2, 3, 1, 5, 4]
+let testArray3 = Array.from(new Set(testArray1.concat(testArray2)))
+return testArray3
